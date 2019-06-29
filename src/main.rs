@@ -29,7 +29,9 @@ fn shellsort(list: &mut [usize], gaps: &[usize]) -> usize {
 fn main() {
     let mut gaps = [701, 301, 132, 57, 23, 10, 4, 1];
     let mut best = 1000000000;
-    for g0 in (1400..5000).into_iter().step_by(100) {
+    // Insert values here
+    let values = [3000];
+    for &g0 in values.iter() {
         let mut list: Vec<usize> = (0..g0).collect();
         for g1 in 600..1400 {
             gaps[0] = g1;
